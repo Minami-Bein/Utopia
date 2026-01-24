@@ -1,0 +1,101 @@
+{
+  "title": "最新发布活动",
+  "description": "按开始时间从晚到早排序的活动列表",
+  "events": [
+    {
+      "id": "19",
+      "title": "Base 生态系统峰会",
+      "description": "探索Base区块链生态系统的最新发展和应用场景，了解其13.94%的链上叙事关注度",
+      "location": "线上",
+      "startTime": "2026-03-15T00:00:00",
+      "endTime": "2026-03-15T23:59:59",
+      "status": "upcoming",
+      "organizer": "Base Foundation",
+      "participants": 5000,
+      "maxParticipants": 8000,
+      "eventType": "public",
+      "tags": ["Base", "区块链", "生态系统"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Base技术架构和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Base功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "20",
+      "title": "Sui 开发者大会",
+      "description": "深入了解Sui区块链的最新技术和应用，探索其11.77%的链上叙事关注度",
+      "location": "线上",
+      "startTime": "2026-03-12T00:00:00",
+      "endTime": "2026-03-12T23:59:59",
+      "status": "upcoming",
+      "organizer": "Mysten Labs",
+      "participants": 4500,
+      "maxParticipants": 7000,
+      "eventType": "public",
+      "tags": ["Sui", "区块链", "开发者大会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Sui技术架构和开发指南，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Sui功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含大会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "21",
+      "title": "区块链信用证应用场景发布会",
+      "description": "了解区块链信用证应用场景的最新发布，探索其在跨境金融服务中的创新应用",
+      "location": "线上",
+      "startTime": "2026-03-10T00:00:00",
+      "endTime": "2026-03-10T23:59:59",
+      "status": "upcoming",
+      "organizer": "全球数商大会组委会",
+      "participants": 4000,
+      "maxParticipants": 6000,
+      "eventType": "public",
+      "tags": ["区块链信用证", "金融", "发布会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的区块链信用证技术架构和应用案例，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的区块链信用证功能介绍和使用指南，登录后可以查看。",
+        "low": "这是低等级内容，包含发布会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "22",
+      "title": "RWA 资产数字化峰会",
+      "description": "探索真实世界资产(RWA)的数字化浪潮，了解协鑫能科与蚂蚁数科合作的光伏绿色资产RWA项目",
+      "location": "线上",
+      "startTime": "2026-03-08T00:00:00",
+      "endTime": "2026-03-08T23:59:59",
+      "status": "upcoming",
+      "organizer": "RWA Alliance",
+      "participants": 3500,
+      "maxParticipants": 5000,
+      "eventType": "public",
+      "tags": ["RWA", "资产数字化", "峰会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的RWA技术架构和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的RWA功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "23",
+      "title": "2026 区块链安全态势大会",
+      "description": "了解2025年区块链安全态势年报的核心内容，探讨Web3领域的安全挑战和解决方案",
+      "location": "线上",
+      "startTime": "2026-03-05T00:00:00",
+      "endTime": "2026-03-05T23:59:59",
+      "status": "upcoming",
+      "organizer": "区块链安全联盟",
+      "participants": 3000,
+      "maxParticipants": 4000,
+      "eventType": "public",
+      "tags": ["区块链安全", "Web3", "大会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的区块链安全态势分析和防护策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的区块链安全威胁介绍和防护指南，登录后可以查看。",
+        "low": "这是低等级内容，包含大会的基本信息和时间地点，任何人都可以查看。"
+      }
+    }
+  ]
+}

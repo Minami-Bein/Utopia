@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./rankings.module.css";
 
@@ -9,89 +9,111 @@ type RankingType = "popular" | "upcoming" | "participants" | "recent";
 // 活动数据接口
 interface Event {
   id: string;
-  name: string;
+  title: string;
   description: string;
+  location: string;
+  startTime: string;
+  endTime: string;
+  status: string;
+  organizer: string;
   participants: number;
-  startTime: Date;
-  category: string;
-  anonymousLevel: "low" | "medium" | "high";
-  organizer?: string; // 如果是匿名活动，可以不显示
+  maxParticipants: number;
+  eventType: string;
+  tags: string[];
+  contentLevels: {
+    high: string;
+    medium: string;
+    low: string;
+  };
 }
 
-// 模拟数据（后续可以从链上或API获取）
-const mockEvents: Event[] = [
-  {
-    id: "1",
-    name: "Web3 黑客松",
-    description: "构建下一代去中心化应用",
-    participants: 1250,
-    startTime: new Date("2024-02-15"),
-    category: "技术",
-    anonymousLevel: "medium",
-  },
-  {
-    id: "2",
-    name: "加密艺术展览",
-    description: "探索NFT艺术的未来",
-    participants: 890,
-    startTime: new Date("2024-02-20"),
-    category: "艺术",
-    anonymousLevel: "high",
-  },
-  {
-    id: "3",
-    name: "DeFi 研讨会",
-    description: "深入了解去中心化金融",
-    participants: 567,
-    startTime: new Date("2024-02-10"),
-    category: "金融",
-    anonymousLevel: "low",
-  },
-  {
-    id: "4",
-    name: "DAO 治理峰会",
-    description: "讨论社区治理最佳实践",
-    participants: 2100,
-    startTime: new Date("2024-03-01"),
-    category: "治理",
-    anonymousLevel: "medium",
-  },
-  {
-    id: "5",
-    name: "区块链游戏嘉年华",
-    description: "体验最新的链游项目",
-    participants: 3400,
-    startTime: new Date("2024-02-25"),
-    category: "游戏",
-    anonymousLevel: "low",
-  },
-];
+// 活动列表接口
+interface EventList {
+  title: string;
+  description: string;
+  events: Event[];
+}
 
 export default function RankingsPage() {
   const [activeTab, setActiveTab] = useState<RankingType>("popular");
+  const [events, setEvents] = useState<Event[]>([]);
+  const [allEvents, setAllEvents] = useState<Event[]>([]);
+  const [stats, setStats] = useState({ totalEvents: 0, totalParticipants: 0, upcomingEvents: 0 });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // 根据不同的排行榜类型排序
-  const getSortedEvents = (type: RankingType): Event[] => {
-    const now = new Date();
-    switch (type) {
-      case "popular":
-        return [...mockEvents].sort((a, b) => b.participants - a.participants);
-      case "upcoming":
-        return [...mockEvents]
-          .filter((e) => e.startTime > now)
-          .sort((a, b) => a.startTime.getTime() - b.startTime.getTime());
-      case "participants":
-        return [...mockEvents].sort((a, b) => b.participants - a.participants);
-      case "recent":
-        return [...mockEvents].sort(
-          (a, b) => b.startTime.getTime() - a.startTime.getTime()
+  // 从JSON文件加载活动数据
+  useEffect(() => {
+    const loadEvents = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // 加载所有四个JSON文件
+        const tabs = ["popular", "upcoming", "recent", "participants"];
+        const fetchPromises = tabs.map(tab => 
+          fetch(`/data/events/${tab}.json`).then(res => res.json() as Promise<EventList>)
         );
-      default:
-        return mockEvents;
-    }
-  };
+        
+        // 同时加载统计数据
+        const statsPromise = fetch(`/data/events/stats.json`).then(res => res.json());
+        
+        const [allData, statsData] = await Promise.all([Promise.all(fetchPromises), statsPromise]);
+        
+        // 合并所有活动数据，去除重复项
+        const allEventsMap = new Map<string, Event>();
+        
+        allData.forEach(data => {
+          data.events.forEach(event => {
+            if (!allEventsMap.has(event.id)) {
+              const formattedEvent = {
+                ...event,
+                name: event.title, // 添加name字段以兼容现有代码
+                category: event.tags[0] || "其他", // 使用第一个标签作为分类
+                anonymousLevel: "medium" as const, // 默认半匿名
+              };
+              allEventsMap.set(event.id, formattedEvent);
+            }
+          });
+        });
+        
+        const mergedAllEvents = Array.from(allEventsMap.values());
+        setAllEvents(mergedAllEvents);
+        
+        // 设置统计数据
+        if (statsData && statsData.stats) {
+          setStats(statsData.stats);
+        }
+        
+        // 根据当前标签页加载对应的活动数据
+        const currentTabData = allData.find(data => 
+          data.title.includes(activeTab === "popular" ? "最热门" : 
+                            activeTab === "upcoming" ? "即将开始" : 
+                            activeTab === "recent" ? "最新发布" : 
+                            activeTab === "participants" ? "参与人数" : "最热门")
+        );
+        
+        if (currentTabData) {
+          const formattedEvents = currentTabData.events.map(event => ({
+            ...event,
+            name: event.title, // 添加name字段以兼容现有代码
+            category: event.tags[0] || "其他", // 使用第一个标签作为分类
+            anonymousLevel: "medium" as const, // 默认半匿名
+          }));
+          setEvents(formattedEvents);
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "加载活动失败");
+        console.error("Error loading events:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const sortedEvents = getSortedEvents(activeTab);
+    loadEvents();
+  }, [activeTab]);
+
+  const sortedEvents = events;
 
   // 获取匿名等级标签
   const getAnonymityBadge = (level: "low" | "medium" | "high") => {
@@ -170,7 +192,7 @@ export default function RankingsPage() {
                     👥 {event.participants.toLocaleString()} 参与者
                   </span>
                   <span className={styles.date}>
-                    📅 {event.startTime.toLocaleDateString("zh-CN")}
+                    📅 {new Date(event.startTime).toLocaleDateString("zh-CN")}
                   </span>
                 </div>
               </div>
@@ -185,23 +207,15 @@ export default function RankingsPage() {
       <div className={styles.stats}>
         <div className={styles.statCard}>
           <h4>总活动数</h4>
-          <p>{mockEvents.length}</p>
+          <p>{stats.totalEvents}</p>
         </div>
         <div className={styles.statCard}>
           <h4>总参与人数</h4>
-          <p>
-            {mockEvents
-              .reduce((sum, e) => sum + e.participants, 0)
-              .toLocaleString()}
-          </p>
+          <p>{stats.totalParticipants.toLocaleString()}</p>
         </div>
         <div className={styles.statCard}>
           <h4>即将开始</h4>
-          <p>
-            {
-              mockEvents.filter((e) => e.startTime > new Date()).length
-            }
-          </p>
+          <p>{stats.upcomingEvents}</p>
         </div>
       </div>
     </div>

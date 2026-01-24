@@ -1,0 +1,101 @@
+{
+  "title": "参与人数最多活动",
+  "description": "按参与人数从多到少排序的活动列表",
+  "events": [
+    {
+      "id": "14",
+      "title": "Hyperliquid 生态系统峰会",
+      "description": "探索Hyperliquid的最新发展和应用场景，了解其2.95万亿美元的交易生态",
+      "location": "线上",
+      "startTime": "2026-02-05T00:00:00",
+      "endTime": "2026-02-05T23:59:59",
+      "status": "upcoming",
+      "organizer": "Hyperliquid Foundation",
+      "participants": 15000,
+      "maxParticipants": 20000,
+      "eventType": "public",
+      "tags": ["Hyperliquid", "区块链", "生态系统"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Hyperliquid技术架构和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Hyperliquid功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "15",
+      "title": "MegaETH 技术发布会",
+      "description": "了解MegaETH的实时区块链技术和应用，探索其毫秒级响应速度的创新",
+      "location": "线上",
+      "startTime": "2026-02-12T00:00:00",
+      "endTime": "2026-02-12T23:59:59",
+      "status": "upcoming",
+      "organizer": "MegaLabs",
+      "participants": 12000,
+      "maxParticipants": 15000,
+      "eventType": "public",
+      "tags": ["MegaETH", "区块链", "技术发布会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的MegaETH技术架构和开发指南，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的MegaETH功能介绍和应用场景，登录后可以查看。",
+        "low": "这是低等级内容，包含发布会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "16",
+      "title": "pump.fun 社区嘉年华",
+      "description": "参与pump.fun的社区活动，探索其在Meme币领域的创新",
+      "location": "线上",
+      "startTime": "2026-02-18T00:00:00",
+      "endTime": "2026-02-18T23:59:59",
+      "status": "upcoming",
+      "organizer": "pump.fun Community",
+      "participants": 10000,
+      "maxParticipants": 12000,
+      "eventType": "public",
+      "tags": ["pump.fun", "区块链", "社区"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的pump.fun技术分析和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的pump.fun功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含嘉年华的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "17",
+      "title": "Chainlink 开发者大会",
+      "description": "深入了解Chainlink的预言机技术和最新发展",
+      "location": "线上",
+      "startTime": "2026-02-22T00:00:00",
+      "endTime": "2026-02-22T23:59:59",
+      "status": "upcoming",
+      "organizer": "Chainlink Foundation",
+      "participants": 8000,
+      "maxParticipants": 10000,
+      "eventType": "public",
+      "tags": ["Chainlink", "区块链", "开发者大会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Chainlink技术架构和开发指南，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Chainlink功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含大会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "18",
+      "title": "Cardano 技术峰会",
+      "description": "探索Cardano的最新技术进展和生态系统发展",
+      "location": "线上",
+      "startTime": "2026-02-28T00:00:00",
+      "endTime": "2026-02-28T23:59:59",
+      "status": "upcoming",
+      "organizer": "Cardano Foundation",
+      "participants": 6000,
+      "maxParticipants": 8000,
+      "eventType": "public",
+      "tags": ["Cardano", "区块链", "技术峰会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Cardano技术架构和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Cardano功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    }
+  ]
+}

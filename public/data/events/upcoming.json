@@ -1,0 +1,158 @@
+{
+  "title": "即将开始活动",
+  "description": "按开始时间从早到晚排序的活动列表",
+  "events": [
+    {
+      "id": "6",
+      "title": "Bitcoin 2026 全球峰会",
+      "description": "探索比特币生态系统的最新发展和未来趋势",
+      "location": "线上",
+      "startTime": "2026-02-01T00:00:00",
+      "endTime": "2026-02-01T23:59:59",
+      "status": "upcoming",
+      "organizer": "Bitcoin Foundation",
+      "participants": 5000,
+      "maxParticipants": 10000,
+      "eventType": "public",
+      "tags": ["Bitcoin", "区块链", "峰会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的比特币技术发展路线图和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的比特币生态系统介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "7",
+      "title": "Ethereum 2.0 技术大会",
+      "description": "深入了解以太坊2.0的最新进展和技术创新",
+      "location": "线上",
+      "startTime": "2026-02-10T00:00:00",
+      "endTime": "2026-02-10T23:59:59",
+      "status": "upcoming",
+      "organizer": "Ethereum Foundation",
+      "participants": 4500,
+      "maxParticipants": 8000,
+      "eventType": "public",
+      "tags": ["Ethereum", "区块链", "技术大会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的以太坊2.0技术架构和开发者指南，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的以太坊2.0功能介绍和应用场景，登录后可以查看。",
+        "low": "这是低等级内容，包含大会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Solana 开发者黑客松",
+      "description": "构建基于Solana的下一代去中心化应用",
+      "location": "线上",
+      "startTime": "2026-02-15T00:00:00",
+      "endTime": "2026-02-15T23:59:59",
+      "status": "upcoming",
+      "organizer": "Solana Foundation",
+      "participants": 3000,
+      "maxParticipants": 5000,
+      "eventType": "public",
+      "tags": ["Solana", "区块链", "黑客松"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Solana开发文档和技术挑战，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Solana开发环境搭建和示例代码，登录后可以查看。",
+        "low": "这是低等级内容，包含黑客松的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "9",
+      "title": "BNB Chain 生态系统峰会",
+      "description": "探索BNB Chain的生态系统和应用场景",
+      "location": "线上",
+      "startTime": "2026-02-20T00:00:00",
+      "endTime": "2026-02-20T23:59:59",
+      "status": "upcoming",
+      "organizer": "Binance",
+      "participants": 4000,
+      "maxParticipants": 7000,
+      "eventType": "public",
+      "tags": ["BNB", "区块链", "生态系统"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的BNB Chain生态系统分析和投资机会，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的BNB Chain功能介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "10",
+      "title": "Avalanche 技术峰会",
+      "description": "深入了解Avalanche的最新技术和应用",
+      "location": "线上",
+      "startTime": "2026-02-25T00:00:00",
+      "endTime": "2026-02-25T23:59:59",
+      "status": "upcoming",
+      "organizer": "Avalanche Foundation",
+      "participants": 2500,
+      "maxParticipants": 4000,
+      "eventType": "public",
+      "tags": ["Avalanche", "区块链", "技术峰会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Avalanche技术架构和开发指南，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Avalanche功能介绍和应用场景，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Polkadot 平行链发布会",
+      "description": "了解Polkadot最新平行链的发布和应用",
+      "location": "线上",
+      "startTime": "2026-03-01T00:00:00",
+      "endTime": "2026-03-01T23:59:59",
+      "status": "upcoming",
+      "organizer": "Web3 Foundation",
+      "participants": 2000,
+      "maxParticipants": 3500,
+      "eventType": "public",
+      "tags": ["Polkadot", "区块链", "发布会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Polkadot平行链技术分析和投资机会，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Polkadot平行链介绍和应用案例，登录后可以查看。",
+        "low": "这是低等级内容，包含发布会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "12",
+      "title": "Sui 开发者大会",
+      "description": "构建基于Sui的下一代Web3应用",
+      "location": "线上",
+      "startTime": "2026-03-05T00:00:00",
+      "endTime": "2026-03-05T23:59:59",
+      "status": "upcoming",
+      "organizer": "Mysten Labs",
+      "participants": 1500,
+      "maxParticipants": 2500,
+      "eventType": "public",
+      "tags": ["Sui", "区块链", "开发者大会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Sui开发文档和技术挑战，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Sui开发环境搭建和示例代码，登录后可以查看。",
+        "low": "这是低等级内容，包含大会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "13",
+      "title": "Arbitrum 扩容解决方案峰会",
+      "description": "探索Arbitrum的最新扩容技术和应用",
+      "location": "线上",
+      "startTime": "2026-03-10T00:00:00",
+      "endTime": "2026-03-10T23:59:59",
+      "status": "upcoming",
+      "organizer": "Arbitrum Foundation",
+      "participants": 1800,
+      "maxParticipants": 3000,
+      "eventType": "public",
+      "tags": ["Arbitrum", "区块链", "扩容"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的Arbitrum扩容技术分析和应用案例，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的Arbitrum功能介绍和使用指南，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    }
+  ]
+}

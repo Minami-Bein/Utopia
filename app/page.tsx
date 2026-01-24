@@ -2,13 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { Wallet } from "@coinbase/onchainkit/wallet";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <header className={styles.headerWrapper}>
-        <Wallet />
       </header>
 
       <div className={styles.content}>

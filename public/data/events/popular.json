@@ -1,0 +1,101 @@
+{
+  "title": "最热门活动",
+  "description": "按参与人数排序的活动列表",
+  "events": [
+    {
+      "id": "5",
+      "title": "区块链游戏嘉年华",
+      "description": "体验最新的链游项目",
+      "location": "线上",
+      "startTime": "2024-02-25T00:00:00",
+      "endTime": "2024-02-25T23:59:59",
+      "status": "upcoming",
+      "organizer": "Blockchain Game Alliance",
+      "participants": 3400,
+      "maxParticipants": 5000,
+      "eventType": "public",
+      "tags": ["区块链", "游戏", "嘉年华"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的游戏项目介绍和开发者访谈，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的嘉年华信息和游戏列表，登录后可以查看。",
+        "low": "这是低等级内容，包含嘉年华的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "4",
+      "title": "DAO 治理峰会",
+      "description": "讨论社区治理最佳实践",
+      "location": "线上",
+      "startTime": "2024-03-01T00:00:00",
+      "endTime": "2024-03-01T23:59:59",
+      "status": "upcoming",
+      "organizer": "DAO Foundation",
+      "participants": 2100,
+      "maxParticipants": 3000,
+      "eventType": "public",
+      "tags": ["DAO", "治理", "峰会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的治理案例分析和专家演讲，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的峰会信息和议程安排，登录后可以查看。",
+        "low": "这是低等级内容，包含峰会的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "1",
+      "title": "Web3 黑客松",
+      "description": "构建下一代去中心化应用",
+      "location": "线上",
+      "startTime": "2024-02-15T00:00:00",
+      "endTime": "2024-02-15T23:59:59",
+      "status": "upcoming",
+      "organizer": "Web3 Foundation",
+      "participants": 1250,
+      "maxParticipants": 2000,
+      "eventType": "public",
+      "tags": ["Web3", "黑客松", "技术"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的技术演讲安排和嘉宾信息，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的活动流程和演讲主题，登录后可以查看。",
+        "low": "这是低等级内容，包含活动的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "2",
+      "title": "加密艺术展览",
+      "description": "探索NFT艺术的未来",
+      "location": "线上",
+      "startTime": "2024-02-20T00:00:00",
+      "endTime": "2024-02-20T23:59:59",
+      "status": "upcoming",
+      "organizer": "NFT Art Gallery",
+      "participants": 890,
+      "maxParticipants": 1500,
+      "eventType": "public",
+      "tags": ["NFT", "艺术", "展览"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的艺术作品介绍和艺术家信息，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的展览信息和作品列表，登录后可以查看。",
+        "low": "这是低等级内容，包含展览的基本信息和时间地点，任何人都可以查看。"
+      }
+    },
+    {
+      "id": "3",
+      "title": "DeFi 研讨会",
+      "description": "深入了解去中心化金融",
+      "location": "线上",
+      "startTime": "2024-02-10T00:00:00",
+      "endTime": "2024-02-10T23:59:59",
+      "status": "upcoming",
+      "organizer": "DeFi Alliance",
+      "participants": 567,
+      "maxParticipants": 1000,
+      "eventType": "public",
+      "tags": ["DeFi", "金融", "研讨会"],
+      "contentLevels": {
+        "high": "这是高等级内容，包含详细的DeFi项目分析和投资策略，只有注册用户才能查看。",
+        "medium": "这是中等级内容，包含基本的DeFi概念和项目介绍，登录后可以查看。",
+        "low": "这是低等级内容，包含研讨会的基本信息和时间地点，任何人都可以查看。"
+      }
+    }
+  ]
+}

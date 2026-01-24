@@ -5,7 +5,7 @@
 }
 
 .content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -19,18 +19,52 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.eventCard {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+.eventsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   margin-bottom: 3rem;
 }
 
-.eventHeader {
+.eventCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.eventTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.eventDescription {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.eventDetails {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eventLocation,
+.eventTime {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0;
 }
 
 .eventStatus {
@@ -39,6 +73,7 @@
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   align-self: flex-start;
+  margin-top: 0.5rem;
 }
 
 .upcoming {
@@ -49,123 +84,6 @@
 .completed {
   background-color: #edf2f7;
   color: #2d3748;
-}
-
-.eventDescription {
-  font-size: 1.1rem;
-  color: #4a5568;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-
-.contentLevels {
-  margin-bottom: 2rem;
-}
-
-.levelContent {
-  background-color: #f7fafc;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid #667eea;
-}
-
-.levelTitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #2d3748;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.levelText {
-  font-size: 1rem;
-  color: #4a5568;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.eventDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.detailItem {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.detailLabel {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2d3748;
-  min-width: 100px;
-}
-
-.detailValue {
-  font-size: 1rem;
-  color: #4a5568;
-  flex: 1;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tag {
-  background-color: #f7fafc;
-  color: #4a5568;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.actionButtons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.primaryButton {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.primaryButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-}
-
-.secondaryButton {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #2d3748;
-  background-color: #f7fafc;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.secondaryButton:hover {
-  background-color: #edf2f7;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .navigationButtons {
@@ -201,32 +119,20 @@
     padding: 1rem;
   }
 
-  .content {
-    padding-top: 1rem;
-  }
-
   .title {
     font-size: 2rem;
+  }
+
+  .eventsList {
+    grid-template-columns: 1fr;
   }
 
   .eventCard {
     padding: 1.5rem;
   }
 
-  .eventDescription {
-    font-size: 1rem;
-  }
-
-  .detailItem {
-    flex-direction: column;
-  }
-
-  .detailLabel {
-    min-width: auto;
-  }
-
-  .actionButtons {
-    flex-direction: column;
+  .eventTitle {
+    font-size: 1.25rem;
   }
 
   .navigationButtons {

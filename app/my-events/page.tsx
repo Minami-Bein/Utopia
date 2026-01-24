@@ -48,7 +48,7 @@ export default function MyEvents() {
 
         <div className={styles.eventsList}>
           {events.map((event) => (
-            <Link key={event.id} href={`/events/${event.id}`} className={styles.eventLink}>
+            <Link key={event.id} href={`/events/${event.id}?source=my-events`} className={styles.eventLink}>
               <div className={styles.eventCard}>
                 <h2 className={styles.eventTitle}>{event.title}</h2>
                 <p className={styles.eventDescription}>{event.description}</p>
