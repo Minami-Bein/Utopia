@@ -45,12 +45,12 @@ export default function Home() {
             },
             {
               name: "创建活动",
-              url: "#",
+              url: "/create",
               internal: true,
             },
             {
               name: "我的活动",
-              url: "#",
+              url: "/my-events",
               internal: true,
             },
             {

@@ -153,6 +153,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .viewButton:hover {

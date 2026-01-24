@@ -175,7 +175,7 @@ export default function RankingsPage() {
                 </div>
               </div>
 
-              <button className={styles.viewButton}>查看详情</button>
+              <Link href={`/events/${event.id}?source=rankings`} className={styles.viewButton}>查看详情</Link>
             </div>
           );
         })}
