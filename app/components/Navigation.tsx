@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import styles from "./Navigation.module.css";
 
 export default function Navigation() {
@@ -17,7 +18,9 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoIcon}>🎭</span>
+          <span className={styles.logoIcon}>
+            <Image src="/sphere.svg" alt="Logo" width={50} height={50} />
+          </span>
           <span className={styles.logoText}>匿名活动</span>
         </Link>
 

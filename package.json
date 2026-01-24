@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "update-middleware": "node update-middleware.js",
+    "dev": "npm run update-middleware && next dev",
+    "build": "npm run update-middleware && next build",
+    "start": "npm run update-middleware && next start",
     "lint": "next lint"
   },
   "dependencies": {
