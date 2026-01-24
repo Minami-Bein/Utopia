@@ -1,0 +1,493 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.headerWrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.required {
+  color: #e53e3e;
+}
+
+.input,
+.textarea,
+.select,
+.timeInput {
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.timeInputGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timeInput {
+  flex: 1;
+}
+
+.timeButton {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.timeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.timeButton:active {
+  transform: translateY(0);
+}
+
+/* Time Trigger Button */
+.timeTriggerButton {
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.timeTriggerButton:hover {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modalContent {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modalContent h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 2rem;
+}
+
+/* Modal Time Input */
+.modalTimeInput {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  margin-bottom: 2rem;
+}
+
+.modalTimeInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Modal Button Group */
+.modalButtonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modalCancelButton,
+.modalConfirmButton {
+  padding: 0.875rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalCancelButton {
+  background-color: #f7fafc;
+  color: #2d3748;
+  border: 2px solid #e2e8f0;
+}
+
+.modalCancelButton:hover {
+  background-color: #edf2f7;
+  transform: translateY(-2px);
+}
+
+.modalConfirmButton {
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.modalConfirmButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.modalConfirmButton:active,
+.modalCancelButton:active {
+  transform: translateY(0);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus,
+.timeInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #a0aec0;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.editableDiv {
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  min-height: 120px;
+  outline: none;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+.editableDiv:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.editableDiv:empty:before {
+  content: attr(placeholder);
+  color: #a0aec0;
+  pointer-events: none;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+.buttonGroup {
+  margin-top: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitting {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Info Section */
+.infoSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.infoCard p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Marker Navigation Bar */
+.markerNav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markerButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.markerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.markerButton:first-child {
+  background-color: #ffcccc;
+  color: #d32f2f;
+}
+
+.markerButton:nth-child(2) {
+  background-color: #ffffcc;
+  color: #f57f17;
+}
+
+.markerButton:nth-child(3) {
+  background-color: #cce5ff;
+  color: #1976d2;
+}
+
+.markerButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Level Display Boxes */
+.levelDisplay {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.levelBox {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.levelDisplay > div:nth-child(1) {
+  background-color: #ffcccc;
+}
+
+.levelDisplay > div:nth-child(2) {
+  background-color: #ffffcc;
+}
+
+.levelDisplay > div:nth-child(3) {
+  background-color: #cce5ff;
+}
+
+.levelBox h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.levelBox p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .formCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .levelDisplay {
+    grid-template-columns: 1fr;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+  }
+}
